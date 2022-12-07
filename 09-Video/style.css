@@ -1,0 +1,170 @@
+/* *{
+    box-sizing: border-box;
+    margin:0;
+}
+.preloader{
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+    bottom: 0;
+    background-color: white;
+    display: grid;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  z-index: 999;
+}
+.hidden{
+    z-index: -999;
+    visibility: hidden;
+}
+video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  z-index: -2;
+  transform: translate(-50%,-50%);
+}
+h1{
+    color:white;
+}
+header{
+    text-align: center;
+    align-items: center;
+    position: relative;
+   display: grid;
+}
+
+.switch{
+    position: absolute;
+   bottom: 7%;
+    left:7%;
+    width:7rem;
+    height:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border:none;
+    border-radius: 8px;
+}
+.switch span{
+    background-color: white;
+    cursor: pointer;
+    color:aqua;
+}
+.hide-btn{
+    position: absolute;
+    width:50%;
+    height:100%;
+    top:0;
+    left:0;
+    display: block;
+    margin: 0;
+    border-radius: 8px;
+    background-color: aqua;
+}
+.slide .hide-btn{
+    left:50%;
+}
+
+header::after{
+    position: absolute;
+  top: 0;
+  right:0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background-color:rgba(0, 0, 0, 0.7);
+  z-index:-1;
+} */
+
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+header{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    /* align-items also works */
+    /* only after you specify the height & use grid it will center the h1 */
+}
+h1{
+    color: white;
+    align-items: center;
+    text-align:center;
+}
+.preloader{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+     justify-content: center; /*it centres the gif file as it is not a text we cant use text-align */
+    align-items: center;
+    z-index: 999;
+    visibility: visible;
+}
+.hidden{
+visibility: hidden;
+z-index: -999;
+}
+.video{
+position: absolute;
+top:0;
+left:0;
+object-fit: cover;
+width:100%;
+height:100%;
+z-index:-2;
+}
+header::after{
+    position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color: rgba(0, 0, 0, 0.7);
+z-index:-1;
+}
+.switch{
+    position: absolute;
+    bottom: 2rem;
+    left:2rem;
+    border:none;
+    background-color: white;
+    border-radius: 8px;
+    width:7rem;
+    height:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+button span{
+    display: inline-block;
+    color: aqua;
+    cursor: pointer;
+}
+.switch .hide-btn{
+    border-radius: 8px;
+    background-color: aqua;
+    display: block;
+    position: absolute;
+    /* using absolute make the btn hidden */
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+}
+.slide .hide-btn{
+    left:50%;
+}
+
+
+
